@@ -1,16 +1,16 @@
+require 'byebug'
 # プレイヤー(自分)に「0 ~ 2」を入力させるロジックを書きます。
 class Player
   def hand
+
     puts "数字を入力してください。"
     puts "0:グー, 1:チョキ, 2:パー"
-    # 変数「input_hand」にプレイヤーが入力したものを取得して代入します。
-      # ヒント! 「getsメソッド」を使用します。
-     input_hand =　gets.to_i
+       input_hand =　gets.to_i 
      while true
     # 「input_hand」(取得した値)が「0, 1, 2」のいずれかだとwhileから脱出させ、それ以外だと初めから繰り返させます。
       # ヒント! 「while」と「if」を使用します。
       # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう
-         if input_hand == 1 || 2 || 3
+         if input_hand == 0 || 1 || 2
            return input_hand
             # ヒント！ 「return」を使用します。
          else
@@ -70,7 +70,7 @@ janken = Janken.new
 
 # 変数「next_game」に「true」を代入します。※「next_game」が「false」にならない限り、永久にwhileで繰り返し処理を実行するためです。
 # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう。
-while next_game
+while next_game = true
 
 # 変数「next_game」にじゃんけんを実行して返ってきた値(戻り値)を代入します。
   # 「janken.pon(player.hand, enemy.hand)」でじゃんけんを実行しています。
