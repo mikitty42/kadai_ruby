@@ -5,7 +5,7 @@ class Player
 
     puts "数字を入力してください。"
     puts "0:グー, 1:チョキ, 2:パー"
-       input_hand =　gets.to_i 
+       input_hand = gets.to_i
      while true
     # 「input_hand」(取得した値)が「0, 1, 2」のいずれかだとwhileから脱出させ、それ以外だと初めから繰り返させます。
       # ヒント! 「while」と「if」を使用します。
@@ -25,7 +25,7 @@ end
 # 敵が「0 ~ 2」の値をランダムで生成するロジックを書きます。
 class Enemy
   def hand
-     puts random.rand(2)
+      rand(0..2)
     # グー、チョキ、パーの値をランダムに出力させます。
   end
 end
@@ -71,9 +71,9 @@ janken = Janken.new
 # 変数「next_game」に「true」を代入します。※「next_game」が「false」にならない限り、永久にwhileで繰り返し処理を実行するためです。
 # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう。
 while next_game = true
-
+    next_game = janken.pon(player.hand, enemy.hand)
+end
 # 変数「next_game」にじゃんけんを実行して返ってきた値(戻り値)を代入します。
   # 「janken.pon(player.hand, enemy.hand)」でじゃんけんを実行しています。
-  next_game = janken.pon(player.hand, enemy.hand)
+
   # じゃんけんの実行結果に「false」が返ってくると、このwhileを終了します。「true」が返ってくると、その回数だけ繰り返し続けます。
-end
