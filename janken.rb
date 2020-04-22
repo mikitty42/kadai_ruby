@@ -70,7 +70,8 @@ janken = Janken.new
 
 # 変数「next_game」に「true」を代入します。※「next_game」が「false」にならない限り、永久にwhileで繰り返し処理を実行するためです。
 # 以降の型の例に沿って実装しましょう ※実装する時場合はコメントアウトに注意しましょう。
-while next_game = true
+next_game = true
+while next_game
     next_game = janken.pon(player.hand, enemy.hand)
 end
 # 変数「next_game」にじゃんけんを実行して返ってきた値(戻り値)を代入します。
